@@ -32,6 +32,16 @@ h4 {
   height: 1.5rem;
   padding-right: 1rem;
 }
+@media only screen and (max-width: 470px) {
+  .logo img {
+    padding: 0;
+    display: block;
+    margin: 0 auto;
+  }
+  .logo span {
+    display: none;
+  }
+}
 
 /* Main Banner */
 
@@ -55,6 +65,23 @@ h4 {
   line-height: 1.2em;
   margin: 0.25em 0;
 }
+@media only screen and (max-width: 470px) {
+  .main-banner {
+    height: 15rem;
+  }
+  .headline {
+    width: 100%;
+    top: 10rem;
+    padding: 1rem 2rem;
+  }
+  .headline h4 {
+    font-size: .77rem;
+  }
+
+  .headline h1 {
+    font-size: 1rem;
+  }
+}
 
 /* Navigation Bar */
 
@@ -67,6 +94,19 @@ nav ul {
   align-items: center;
   justify-content: space-between;
   padding: 0.75em 0;
+}
+.mobile-nav {
+  display: none;
+}
+@media only screen and (max-width: 1024px) {
+  nav ul {
+    display: none;
+  }
+  .mobile-nav {
+    display: block;
+    text-align: center;
+    padding: 0.75em 0;
+  }
 }
 
 /* Products */
@@ -108,10 +148,44 @@ nav ul {
   padding: 1rem 2rem;
 }
 
+@media only screen and (max-width: 1024px)
+{
+  .product {
+    width: 47%;
+  }
+  .product.glasses {
+    display: none;
+  }
+}
+@media only screen and (max-width: 470px) {
+  .product-grid,
+  .business-info {
+    flex-wrap: wrap;
+  }
+  .product.watch {
+    display: none;
+  }
+  .product {
+    width: 90%;
+    margin: auto;
+  }
+  .info {
+    width: 90%;
+    margin: 0.5em auto;
+  }
+}
+
+
 /* Footer */
 footer {
   background-color: black;
   color: white;
   padding: 5rem 0;
   margin-top: 4rem;
+}
+
+@media only screen and (max-width: 470px) {
+  footer {
+    text-align: center;
+  }
 }
